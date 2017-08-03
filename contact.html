@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width">
+		<title>Website Project</title>
+		<link rel="stylesheet" type="text/css" href="./css/projectstyle.css">
+	</head>
+	<body>
+		<header>
+			<!-- bring nav bar to each link so you can move from link to link -->
+			<nav>
+	     	<ul class="nav-bar">
+	        <li><a href="index.html">Home</a></li>
+	        <li><a href="biography.html">Biography</a></li>
+	        <li><a href="resume.html">Resume</a></li>
+	        <li><a href="codepen.html">Code Pen</a></li>
+	        <li><a href="gallery.html">Gallery</a></li>
+	        <li class="selected"><a href="contact.html" >Contact</a></li> 
+	    	</ul>
+	    </nav>
+		</header>
+		<main>
+
+			<form id="contact-form" action="#" method="post" onSubmit="return functionname();">		<!-- use post so users info is encripted -->
+
+			  <!-- name -->
+			  <!-- every lable needs a for -->
+			  <!-- input needs an id with the same value as its name and for -->
+			  <div>
+			    <label for="firstname">First Name:</label>
+			    <input type="text" id="firstname" name="firstname" placeholder="Johnny" />
+			  </div>
+			  <div>
+			    <label for="lastname">Last Name:</label>
+			    <input type="text" id="lastname" name="lastname" placeholder="Appleseed" />
+			  </div>
+			  <!-- email-->
+		   	<div>
+			    <label for="email">Email:</label>
+			    <input type="email" id="email" name="email" placeholder="johnny@gmail.com" />
+		   	</div>
+			  <!-- phone-->
+		   	<div>
+			    <label for="phone">Phone:</label>
+			    <input type="tel" id="phone" name="phone" placeholder="xxx-xxx-xxxx" pattern="^\d{3}-\d{3}-d\{4}$" />
+		   	</div>
+			  <!-- company-->
+		   	<div>
+			    <label for="company">Company:</label>
+			    <input type="text" id="company" name="company" placeholder="Red Ventures" />
+		   	</div>
+			  <!-- comments/questions-->
+		   	<div>
+			    <label for="comments">Comments/Questions:</label>
+			    <textarea rows="10" cols="60" id="comments" name="comments" placeholder="Leave comments/questions here"></textarea>
+		   	</div>
+			  <!-- save button-->
+		   	<div>
+			  	<input type="submit" name="submit" value="Submit" />
+		   	</div>	   
+			</form> 
+		</main>
+  
+  	<!-- use div to make space between main and footer -->
+  	<div id="push"></div>
+
+	  <!-- create footer with social media links -->
+	  <footer>
+	  	<a href="https://www.linkedin.com/in/lesly-perez-922806146/"><img class="icon" src="https://cdn.pixabay.com/photo/2014/07/24/08/16/linkedin-400850_960_720.png" alt="linkedin logo"></a>
+	  	<a href="http://www.roadtohire.org/"><img class="icon" src="./img/numbers-11.png" alt="RoadtoHire link"></a>
+	  	<a href="https://www.instagram.com/lesly_epr/?hl=en"><img class="icon" src="./img/instagram-logo.jpg" alt="ig"></a>
+	    
+	  	<!-- Disclaimer for photos -->
+	    <p>Disclaimer: All graphics are used for educational purposes only, and not for profit, in accordance with the Fair Use Act. All trademarks, trade names, or logos mentioned or used are the property of their respective owners. It will be removed at the request of copyright owner(s).</p>
+	  	<p>&copy;2017 Lesly Perez</p>
+	  </footer>
+
+  </body>
+</html>
+  
