@@ -459,8 +459,8 @@ html, body, nav {
   font-family: "Times New Roman", Times, serif
 }
 
-body{     /******** target body so footer doesn't show over the content ****/
-  padding-bottom: 15%;
+body{  /* target body so footer doesn't show over the content */
+  padding-bottom: 45%;
 }
 
 .nav-bar {  
@@ -502,9 +502,20 @@ body{     /******** target body so footer doesn't show over the content ****/
 
 /* style banner picture in header of home page */
 #banner-picture {
-  width: 100%;
+  background: url('../img/banner.jpg') 50% 50%;
+  background-size: cover;
   height: 500px;
-  margin: 0px auto;
+  width: 100%;
+ 
+}
+
+.margins {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.expeirence-text-wrapper {
+  width:65%;
 }
 
 /* style main in home section*/
@@ -512,26 +523,27 @@ body{     /******** target body so footer doesn't show over the content ****/
   margin-top: 30px;
   color: #4C5A69;
   font-family: 'Lobster Two', cursive;
-  width: 50%;
 }
 
 /* style p in home section*/
-.home p{
+#web-summary, .expeirence-text-wrapper {
   color: black;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Times New Roman', Times, serif;
+  width: 60%;
+ 
 }
 
 /* style ul in home section*/
 #web-summary {
   color: black;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Times New Roman', Times, serif;
   list-style-type: square;
 }
 
 /* creates space between main content and footer*/
-#push {
+/*#push {
   margin-bottom: 50%;
-}
+}*/
 
 /* style footer */
 footer {
@@ -549,17 +561,57 @@ footer {
   height: 35px;
   padding: 0 20px;
 }
-
-/* style h1 in biography page*/
+/************************ START STYLES FOR BIO PAGE ********************************************/
+/* style h1 in bio page*/
 #about-me {
   color: #594C34;
+  text-shadow: 3px 3px 2px #AD9364;
+  margin: 0px;
 }
 
+/* style pic in bio page */
 #tag-photo {
   width: 250px;
   height: 250px;
 }
 
 .bio-page {
+  margin: 0 auto;
+  width: 60%;
   text-align: center;
+}
+.bio-page section {
+  margin: 10%;
+}
+/* style the uls in bio page */
+ul.bio-ul, ul.lifegoals{
+  list-style-type: square;
+  margin: auto 35%;
+  text-align: left;
+}
+
+ul.bio-ul, ul.lifegoals {
+  min-width: 300px;
+
+}
+/* START STYLES FOR RESUME PAGE */
+/* style my personal info */
+.personal-info {
+  text-align: center;
+}
+#resume-name {
+  font-weight: bold;
+  font-size: 20px;
+  text-shadow: 2px 2px 2px #6A7C91;
+}
+/* style line break */
+.resume h2 {
+  border-bottom: 3px solid #4C5A69;
+}
+
+/* START STYLES FOR CODEPEN PAGE */
+
+/* START STYLES FOR GALLERY PAGE */
+.gallery {
+
 }

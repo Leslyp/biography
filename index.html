@@ -4,13 +4,19 @@
 		<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width">
 		<title>Website Project</title>
-		<link rel="stylesheet" type="text/css" href="./css/projectstyle.css">
-		<link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Lobster+Two" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="./lib/css/projectstyle.css">
+		<link href="https://fonts.googleapis.com/css?family=Times+New+Roman%7CCinzel+Decorative%7CLobster+Two%7C" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Times+New+Roman" rel="stylesheet"> 
+		 <!--put fonts in head so they load before js-->
 	</head>
 	<body>
 		<header>
-	 		<img id="banner-picture" src="./img/banner.jpg" alt="flower"> 
- 			<!--create class menu to target nav bar-->
+<!-- 	 		<img id="banner-picture" src="./lib/img/banner.jpg" alt="flower"> 
+ --> 		
+ 			<div>
+ 				<div id="banner-picture"></div>
+ 			</div> 
+ 	<!--create class menu to target nav bar-->
 	  	<nav>
 	     	<ul class="nav-bar">
 	        <li id="my-name">Lesly Perez</li>
@@ -23,7 +29,7 @@
 	    	</ul>
 	    </nav>
 		</header>
-		<main>
+		<main class="margins">
 			<!-- section Description of all pages -->
     	<section class="home">
     		<h2>Welcome to My Website</h2>
@@ -40,20 +46,20 @@
 			<!-- section Experience -->
     	<section class="home">
     		<h2>My Experience with RoadtoHire</h2>
-	    	<p>Throughout my time in the RoadtoHire program, I have gained many new skills. Some of which pretain to my coding abilities and knowledge and others that have helped improve my professional development. I am grateful for all the resources and time this program has allowed us to utilize and for all the help our advisors/mentors have given us. This expeirence has been tough but rewarding.</p>
+	    	<p class="expeirence-text-wrapper">Throughout my time in the RoadtoHire program, I have gained many new skills. Some of which pretain to my coding abilities and knowledge and others that have helped improve my professional development. I am grateful for all the resources and time this program has allowed us to utilize and for all the help our advisors/mentors have given us. This expeirence has been tough but rewarding.</p>
     	</section>    
 
 		</main>
 
 		<!-- use div to make space between main and footer -->
-		<div id="push"></div>
+		<!-- <div id="push"></div> -->
 
 		<!-- create footer with social media links -->
 		<footer>
 	  	<div>
-	  		<a href="https://www.linkedin.com/in/lesly-perez-922806146/"><img class="icon" src="https://cdn.pixabay.com/photo/2014/07/24/08/16/linkedin-400850_960_720.png" alt="linkedin logo"></a>
-		  	<a href="http://www.roadtohire.org/"><img class="icon" src="./img/numbers-11.png" alt="RoadtoHire link"></a>
-		  	<a href="https://www.instagram.com/lesly_epr/?hl=en"><img class="icon" src="./img/instagram-logo.jpg" alt="instagram logo"></a>
+	  		<a href="https://www.linkedin.com/in/lesly-perez-922806146/" target="_blank"><img class="icon" src="https://cdn.pixabay.com/photo/2014/07/24/08/16/linkedin-400850_960_720.png" alt="linkedin logo"></a>
+		  	<a href="http://www.roadtohire.org/" target="_blank"><img class="icon" src="./lib/img/numbers-11.png" alt="RoadtoHire link"></a>
+		  	<a href="https://www.instagram.com/lesly_epr/?hl=en" target="_blank"><img class="icon" src="./lib/img/instagram-logo.jpg" alt="instagram logo"></a>
 	  	</div>
 	  	
 			<!-- Disclaimer for photos -->
