@@ -5,12 +5,19 @@
   	<meta name="viewport" content="width=device-width">
 		<title>Website Project</title>
 		<link rel="stylesheet" type="text/css" href="./lib/css/projectstyle.css">
+		<link href="https://fonts.googleapis.com/css?family=Times+New+Roman%7CCinzel+Decorative%7CLobster+Two%7C" rel="stylesheet">
+ 		<!--put fonts in head so they load before js-->
+ 		<script src="projectscript.js"></script>
 	</head>
 	<body>
 		<header>
+			<div>
+ 				<div id="banner-picture"></div>
+ 			</div> 
 			<!-- bring nav bar to each link so you can move from link to link -->
 			<nav>
 	     	<ul class="nav-bar">
+	     		<li id="my-name">Lesly Perez</li>
 	        <li><a href="index.html">Home</a></li>
 	        <li><a href="biography.html">Biography</a></li>
 	        <li><a href="resume.html">Resume</a></li>
@@ -20,9 +27,9 @@
 	    	</ul>
 	    </nav>
 		</header>
-		<main>
+		<main class="contact">
 
-			<form id="contact-form" action="#" method="post" onSubmit="return functionname();">		<!-- use post so users info is encripted -->
+			<form id="contact-form" action="#" method="post" onSubmit="return validateForm();">		<!-- use post so users info is encripted -->
 
 			  <!-- name -->
 			  <!-- every lable needs a for -->
@@ -53,7 +60,7 @@
 			  <!-- comments/questions-->
 		   	<div>
 			    <label for="comments">Comments/Questions:</label>
-			    <textarea rows="10" cols="60" id="comments" name="comments" placeholder="Leave comments/questions here"></textarea>
+			    <textarea rows="6" cols="40" id="comments" name="comments" placeholder="Leave comments/questions here"></textarea>
 		   	</div>
 			  <!-- save button-->
 		   	<div>
@@ -62,9 +69,6 @@
 			</form> 
 		</main>
   
-  	<!-- use div to make space between main and footer -->
-  	<!-- <div id="push"></div>
- -->
 	  <!-- create footer with social media links -->
 	  <footer>
 	  	<a href="https://www.linkedin.com/in/lesly-perez-922806146/" target="_blank"><img class="icon" src="https://cdn.pixabay.com/photo/2014/07/24/08/16/linkedin-400850_960_720.png" alt="linkedin logo"></a>

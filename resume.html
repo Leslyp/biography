@@ -5,12 +5,18 @@
   	<meta name="viewport" content="width=device-width">
 		<title>Website Project</title>
 		<link rel="stylesheet" type="text/css" href="./lib/css/projectstyle.css">
+		<link href="https://fonts.googleapis.com/css?family=Times+New+Roman%7CCinzel+Decorative%7CLobster+Two%7C" rel="stylesheet">
+    <!--put fonts in head so they load before js-->
 	</head>
 	<body>
 		<header>
+			<div>
+ 				<div id="banner-picture"></div>
+ 			</div> 
 			<!-- bring nav bar to each link so you can move from link to link -->
 			<nav>
 	     	<ul class="nav-bar">
+	     		<li id="my-name">Lesly Perez</li>
 	        <li><a href="index.html">Home</a></li>
 	        <li><a href="biography.html">Biography</a></li>
 	        <li class="selected"><a href="resume.html">Resume</a></li>
@@ -30,14 +36,13 @@
 
     	<!-- section 2 -->
     	<section>
-    		<h2>Objective</h2>
-    		<!-- <hr> -->
+    		<h2 class="border">Objective</h2>
 	    	<p>To obtain a job as a software engineer.</p>
     	</section>
 
 	    <!-- section 3 -->
 	    <section>
-	    	<h2>Experience</h2>
+	    	<h2 class="border">Experience</h2>
 	    	<p>RoadtoHire Tech Academy</p>
 	    </section>
 	    
@@ -56,7 +61,7 @@
 	    <!-- section 6 -->
 	    <section>
 	    	<h3>Description</h3>
-		    <ul class="resume-ul">
+		    <ul>
 		    	<li>Learn new coding languages like HTML, CSS, and Javascript</li>
 		    	<li>Work on my profressional development skills</li>
 		    	<li>Focus on building team skills</li>
@@ -65,7 +70,7 @@
 	    
 	    <!-- section 7 -->
 	    <section>
-	    	<h2>Education</h2>
+	    	<h2 id="border">Education</h2>
 	    </section>
 	    
 	    <article>
@@ -90,16 +95,13 @@
 	    
 	    <article>
 	    	<h3>GPA</h3>
-		    <ul class="resume-ul">
+		    <ul>
 		    	<li>3.8 unweighted</li>
 		    	<li>4.8 weighted</li>
 		    </ul>
 	    </article>
 	    
 		</main>
-
-		<!-- use div to make space between main and footer -->
-		<!-- <div id="push"></div> -->
 
     <!-- create footer with social media links -->
 	  <footer>

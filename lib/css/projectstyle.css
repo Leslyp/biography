@@ -449,45 +449,58 @@ template {
  ****************************    END OF CSS RESET *****************************                      
  *****************************************************************************/
 
+
+
 /***************************** style for the nav bar *************************/
-html, body, nav {
+html, body {
   background-color: #FFEFD4;
   margin: 0;
   padding: 0;
+  /* becomes the parent element */
   position: relative; 
   width: 100%; 
+  height: 100%;
   font-family: "Times New Roman", Times, serif
 }
 
-body{  /* target body so footer doesn't show over the content */
-  padding-bottom: 45%;
+nav {
+  margin: 0;
+  padding: 0;
+  width: 100%; 
 }
 
-.nav-bar {  
+/* creates space for footer */
+#container {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 60px;
+}
+
+ul.nav-bar {  
   list-style-type: none;
   background-color: #829AB2;
+  /* these keep nav on the top of the page, w/o blank space */
   padding: 0;
   margin: 0;
+  /* needed to display floated li's */
   overflow: hidden;
 }
 
-.nav-bar li {
-  display: inline-block;
-  margin-top: 0px;
-} 
-
+/* made links float left to display as horizontal on desktop */
 .nav-bar li a {
-  display: block;
+  float: left;
+  display: inline-block;
   padding: 15px;
   text-decoration: none;
   color: white;
+  /* make each of the links have the same height, so my-name and hamburger icon don't mess up hover */
+  height: 25px;
 }
 
 .nav-bar li a:hover {
   background-color: #C1D4E8;
 }
 
-/* shows you which link your on in nav bar */
 .selected {
   background-color: #36547D;
 }
@@ -496,63 +509,116 @@ body{  /* target body so footer doesn't show over the content */
 #my-name {
   font-family: 'Cinzel Decorative', cursive;
   color: white;
-  padding: 10px;
   text-shadow: 2px 2px #E3B960;
+}
+/* doesn't show hamburger icon on desktop */
+.nav-bar .home-icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {  /* for mobile view */
+  /* removing float left on mobile */
+  .nav-bar li {
+    float: none;
+  }
+  
+  /* removing display inline-block from mobile 
+   displays each link on a seperate line  */
+  .nav-bar li a {
+    display: block;
+  }
+  
+  /* only show name by default on mobile*/
+  .nav-bar li:not(:first-child) {
+    display: none;
+  }
+  
+  /* show home icon and display on same line as name
+  when dropdown is hidden */
+ .nav-bar li.home-icon {
+    display: block;
+    float: right;
+  }
+  
+  /* show home icon on same line as my name
+  when dropdown is shown*/
+  .nav-bar.dropdown .home-icon {
+    position: absolute;
+    /* take into account banner height which is 100px */
+    right: 0px;
+    top: 100px;
+  } 
+  
+  /* don't change color on name when selected
+  otherwise it will look weird*/
+  #my-name a.selected {
+    background-color: #829AB2;
+  }
+  
+  /* used when dropdown is shown */
+  .nav-bar.dropdown li {
+    display: block;
+    float: none;
+  }
+  
+  /* li are shown as block*/
+   .nav-bar.dropdown li a {
+    display: block;
+    float: none;
+  }
+
+  /* changed banner size for mobile */
+  div#banner-picture {
+    height: 100px; 
+  }
 }
 
 /* style banner picture in header of home page */
 #banner-picture {
-  background: url('../img/banner.jpg') 50% 50%;
+  background: url('../img/banner.jpg');
   background-size: cover;
-  height: 500px;
+  height: 300px;
   width: 100%;
- 
 }
 
-.margins {
+.margins, .resume {
   margin-left: 2.5%;
   margin-right: 2.5%;
 }
 
-.expeirence-text-wrapper {
-  width:65%;
-}
-
 /* style main in home section*/
- .home, h2{
+ .home {
   margin-top: 30px;
+  width: 60%;
+ }
+ 
+/* stlye all h2 */
+ h2 {
   color: #4C5A69;
   font-family: 'Lobster Two', cursive;
 }
 
-/* style p in home section*/
-#web-summary, .expeirence-text-wrapper {
+/* style all p */
+p {
   color: black;
   font-family: 'Times New Roman', Times, serif;
-  width: 60%;
- 
 }
 
-/* style ul in home section*/
-#web-summary {
-  color: black;
-  font-family: 'Times New Roman', Times, serif;
+/* style all ul */
+ul {
   list-style-type: square;
 }
 
-/* creates space between main content and footer*/
-/*#push {
-  margin-bottom: 50%;
-}*/
-
 /* style footer */
 footer {
-  background-color: white;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   font-size: 12px;
   display: block;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 60px;
 }
 
 /* style the footer icons*/
@@ -561,12 +627,15 @@ footer {
   height: 35px;
   padding: 0 20px;
 }
+
 /************************ START STYLES FOR BIO PAGE ********************************************/
+
 /* style h1 in bio page*/
-#about-me {
+h1 {
   color: #594C34;
   text-shadow: 3px 3px 2px #AD9364;
   margin: 0px;
+  margin-top: 30px;
 }
 
 /* style pic in bio page */
@@ -575,26 +644,8 @@ footer {
   height: 250px;
 }
 
-.bio-page {
-  margin: 0 auto;
-  width: 60%;
-  text-align: center;
-}
-.bio-page section {
-  margin: 10%;
-}
-/* style the uls in bio page */
-ul.bio-ul, ul.lifegoals{
-  list-style-type: square;
-  margin: auto 35%;
-  text-align: left;
-}
-
-ul.bio-ul, ul.lifegoals {
-  min-width: 300px;
-
-}
 /* START STYLES FOR RESUME PAGE */
+
 /* style my personal info */
 .personal-info {
   text-align: center;
@@ -604,14 +655,35 @@ ul.bio-ul, ul.lifegoals {
   font-size: 20px;
   text-shadow: 2px 2px 2px #6A7C91;
 }
+
+.resume {
+  margin: auto 0px;
+}
+
 /* style line break */
-.resume h2 {
+.border {
   border-bottom: 3px solid #4C5A69;
+  display: block;
 }
 
 /* START STYLES FOR CODEPEN PAGE */
 
 /* START STYLES FOR GALLERY PAGE */
-.gallery {
 
+/* style gallery mobile view */
+.gallery figure {
+  text-align: center;
 }
+.gallery img {
+  width: 300px;
+  height: 300px;
+}
+
+/* START STYLES FOR CONTACT PAGE */
+.contact div{
+  margin: 2.5%;
+  padding-bottom: 1.5%;
+}
+
+
+

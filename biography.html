@@ -5,12 +5,18 @@
   	<meta name="viewport" content="width=device-width">
 		<title>Website Project</title>
 		<link rel="stylesheet" type="text/css" href="./lib/css/projectstyle.css">
+		<link href="https://fonts.googleapis.com/css?family=Times+New+Roman%7CCinzel+Decorative%7CLobster+Two%7C" rel="stylesheet">
+		<!--put fonts in head so they load before js--> 
 	</head>
 	<body>
 		<header>
+			<div>
+ 				<div id="banner-picture"></div>
+ 			</div> 
 			<!-- bring nav bar to each link so you can move from link to link -->
 			<nav >
 	     	<ul class="nav-bar">
+	     		<li id="my-name">Lesly Perez</li>
 	        <li><a href="index.html">Home</a></li>
 	        <li class="selected"><a href="biography.html">Biography</a></li>
 	        <li><a href="resume.html">Resume</a></li>
@@ -19,12 +25,13 @@
 	        <li><a href="contact.html" >Contact</a></li> 
 	    	</ul>
 	    </nav>
+	    
 		</header>
-		<main class="bio-page">
+		<main class="margins">
 			<section>
-				<h1 id="about-me">About Me</h1>
+				<h1>About Me</h1>
 			</section>
-
+				
 			<section>
 				<img id="tag-photo" src="./lib/img/tag-photo.png" alt="potrait">
 			</section>
@@ -42,7 +49,7 @@
 	    <section>
 	    	<div>
 					<h2>Hobbies</h2>
-			    <ul class="bio-ul">
+			    <ul>
 			    	<li>Painting</li>
 			    	<li>Swimming</li>
 			    	<li>Reading</li>
@@ -52,7 +59,7 @@
 	    
 			<section>
 				<h2>Life Goals</h2>
-		    <ul class="lifegoals">
+		    <ul>
 		   		<li>Getting a job as a software engineer</li>
 		   		<li>Going to college</li>
 		  		<li>Being financially secure</li>
@@ -60,9 +67,6 @@
 			</section>
 			 
 		</main> 
-
-		<!-- use div to make space between main and footer -->
-		<!-- <div id="push"></div> -->
 
 		<!-- create footer with social media links -->
 	  <footer>
