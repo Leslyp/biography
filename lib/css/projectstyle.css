@@ -468,12 +468,11 @@ nav {
   padding: 0;
   width: 100%; 
 }
-
 /* creates space for footer */
 #container {
   min-height: 100%;
   position: relative;
-  padding-bottom: 60px;
+  padding-bottom: 80px;
 }
 
 ul.nav-bar {  
@@ -484,6 +483,7 @@ ul.nav-bar {
   margin: 0;
   /* needed to display floated li's */
   overflow: hidden;
+  font-size: 20px;
 }
 
 /* made links float left to display as horizontal on desktop */
@@ -516,7 +516,198 @@ ul.nav-bar {
   display: none;
 }
 
-@media screen and (max-width: 600px) {  /* for mobile view */
+
+/************************ style banner picture in header of home page **********************/
+#banner-picture {
+  background: url('../img/banner.jpg');
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+}
+
+/************************ style basic content all the same **********************/
+
+/* add margin to pages */
+.margins {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+/* style main in home section*/
+.home {
+  margin-top: 30px;
+  width: 60%;
+ }
+ 
+/* stlye all h2 */
+h2 {
+  color: #4C5A69;
+  font-family: 'Lobster Two', cursive;
+}
+
+/* style all p */
+p {
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+}
+
+/* style all ul */
+ul {
+  list-style-type: square;
+}
+
+/* style footer */
+footer {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 60px;
+}
+
+/* style footer content to appear smaller */
+p.disclaimer {
+font-size: 14px;
+}
+
+/* style the footer icons*/
+.icon {
+  width: 35px;
+  height: 35px;
+  padding: 5px 20px;
+}
+
+/************************ START STYLES FOR BIO PAGE ********************************************/
+
+/* style h1 in bio page*/
+h1 {
+  color: #594C34;
+  text-shadow: 3px 3px 2px #AD9364;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* style pic in bio page */
+#tag-photo {
+  width: 250px;
+  height: 250px;
+}
+
+/* style main content tag */
+.bio{
+  margin: auto 2.5%;
+}
+
+/************************************ START STYLES FOR RESUME PAGE *****************************/
+
+/* style my personal info */
+.personal-info {
+  text-align: center;
+}
+
+/* style name in fancy font */
+#resume-name {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-shadow: 2px 2px 2px #6A7C91;
+}
+
+.resume {
+  margin: 2.5%;
+  padding: 5px;
+  /* create solid border around main content */
+  border-style: solid;
+  border-color: #36547D;
+}
+
+/* style line break */
+.border, .border-footer {
+  border-bottom: 3px solid #829AB2;
+  display: block;
+}
+
+/************************************ START STYLES FOR CODEPEN PAGE ****************************/
+
+/* this makes the div have sticky position */
+.sticky-codepen { 
+  position: sticky;
+  margin-top: 5%;
+}
+
+/* this targets h2 and links */
+.sticky-codepen h2, a{
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* this targets the immediate child div of the dl */
+dl > div {
+  background: #fff;
+}
+
+/* this targets the term or collection name of challenges */
+dt {
+  background: #B0C0D4;
+  color: #4A3F2B;
+  padding: 5px 10px;
+  /* this keeps term at top until you have scrolled through all it's content */
+  position: sticky;
+  top: -1px;
+  border-bottom: 3px solid #735728;
+  border-top: 3px solid #735728;
+  font-size: 20px;
+}
+
+/* this represents the descriptions which are h2 and p */
+dd {
+  margin: 5px;
+  padding: 10px;
+}
+
+/* the + is an adjacent sibling combinator which seperates the 2 selctors,
+creates the border line between the h2 and p */
+dd + dd {
+  border-top: 1.5px solid #735728;  
+}
+
+/************************************ START STYLES FOR GALLERY PAGE ****************************/
+/* center h1 in gallery */
+.gallery-header  {
+ text-align: center;
+}
+
+/* style gallery desktop view */
+.gallery{
+  margin: 5% 10%;
+  padding: 2%;
+  height: 1400px;
+}
+
+.gallery figure {
+  float: left;
+}
+
+.gallery img {
+  width: 280px;
+  height: 300px;
+}
+
+/************************************ START STYLES FOR CONTACT PAGE ****************************/
+.contact div{
+  margin: 2.5%;
+  padding-bottom: 1.5%;
+}
+
+#contact-form {
+  font-size: 20px;
+}
+/*********************************** media query for mobile view **********************/
+@media screen and (max-width: 600px) {   
   /* removing float left on mobile */
   .nav-bar li {
     float: none;
@@ -571,119 +762,50 @@ ul.nav-bar {
   div#banner-picture {
     height: 100px; 
   }
-}
 
-/* style banner picture in header of home page */
-#banner-picture {
-  background: url('../img/banner.jpg');
-  background-size: cover;
-  height: 300px;
-  width: 100%;
-}
-
-.margins, .resume {
-  margin-left: 2.5%;
-  margin-right: 2.5%;
-}
-
-/* style main in home section*/
- .home {
-  margin-top: 30px;
-  width: 60%;
- }
- 
-/* stlye all h2 */
- h2 {
-  color: #4C5A69;
-  font-family: 'Lobster Two', cursive;
-}
-
-/* style all p */
-p {
-  color: black;
-  font-family: 'Times New Roman', Times, serif;
-}
-
-/* style all ul */
-ul {
-  list-style-type: square;
-}
-
-/* style footer */
-footer {
-  position: absolute;
-  bottom: 0;
-  font-size: 12px;
-  display: block;
-  width: 100%;
-  margin: 0;
+  /* style gallery mobile view */
+  .gallery figure {
+  text-align: center;
+  margin: 2.5%;
   padding: 0;
-  height: 60px;
-}
+  }
 
-/* style the footer icons*/
-.icon {
-  width: 35px;
-  height: 35px;
-  padding: 0 20px;
-}
-
-/************************ START STYLES FOR BIO PAGE ********************************************/
-
-/* style h1 in bio page*/
-h1 {
-  color: #594C34;
-  text-shadow: 3px 3px 2px #AD9364;
-  margin: 0px;
-  margin-top: 30px;
-}
-
-/* style pic in bio page */
-#tag-photo {
-  width: 250px;
-  height: 250px;
-}
-
-/* START STYLES FOR RESUME PAGE */
-
-/* style my personal info */
-.personal-info {
-  text-align: center;
-}
-#resume-name {
-  font-weight: bold;
-  font-size: 20px;
-  text-shadow: 2px 2px 2px #6A7C91;
-}
-
-.resume {
-  margin: auto 0px;
-}
-
-/* style line break */
-.border {
-  border-bottom: 3px solid #4C5A69;
-  display: block;
-}
-
-/* START STYLES FOR CODEPEN PAGE */
-
-/* START STYLES FOR GALLERY PAGE */
-
-/* style gallery mobile view */
-.gallery figure {
-  text-align: center;
-}
-.gallery img {
+  .gallery img {
   width: 300px;
   height: 300px;
+  float: none;
+  }
+
+  /* change postion on mobile view so that it stays at the bottom */
+  footer, .border-footer {
+    position: relative;
+    display: block;
+    width: 100%;
+    clear: both;
+    }
+
 }
 
-/* START STYLES FOR CONTACT PAGE */
-.contact div{
+@media screen and (min-width: 600px) and (max-device-width: 1000px) {
+
+  /* style gallery for new view */
+  .gallery figure {
+  text-align: center;
   margin: 2.5%;
-  padding-bottom: 1.5%;
-}
+  padding: 0;
+  }
 
+  .gallery img {
+  width: 300px;
+  height: 300px;
+  float: none;
+  }
 
-
+  /* change postion so it stays at the bottom */
+  footer, .border-footer {
+    position: relative;
+    display: block;
+    width: 100%;
+    clear: both;
+  }
+}  
