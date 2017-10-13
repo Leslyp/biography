@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
+		<!--  -->
+		<meta charset="utf-8"> 
   	<meta name="viewport" content="width=device-width">
 		<title>Website Project</title>
-		<link rel="stylesheet" type="text/css" href="./lib/css/projectstyle.css">
+		<link rel="stylesheet" type="text/css" href="./lib/css/styles.css">
 		<script src="lib/js/projectscript.js"></script> <!-- add js to html-->
 		<link href="https://fonts.googleapis.com/css?family=Times+New+Roman%7CCinzel+Decorative%7CLobster+Two%7C" rel="stylesheet">
 		 <!--put fonts in head so they load before js-->

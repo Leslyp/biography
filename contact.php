@@ -5,9 +5,9 @@
   	<meta name="viewport" content="width=device-width">
 		<title>Website Project</title>
 		<link rel="stylesheet" type="text/css" href="./lib/css/projectstyle.css">
-		<script src= "lib/js/projectscript.js"></script> <!-- add js to html-->
+		<script src="lib/js/projectscript.js"></script> <!-- add js to html-->
 		<link href="https://fonts.googleapis.com/css?family=Times+New+Roman%7CCinzel+Decorative%7CLobster+Two%7C" rel="stylesheet">
-		<!--put fonts in head so they load before js--> 
+ 		<!--put fonts in head so they load before js-->
 	</head>
 	<body>
 		<div id="container">
@@ -20,56 +20,61 @@
 		     	 <!-- id is used for dropdown class in mobile -->
 		     	<ul id="myNavBar" class="nav-bar">
 	          <li id="my-name"><a href="index.html">Lesly Perez</a></li>
-		        <li><a class="selected" href="biography.html">Biography</a></li>
+		        <li><a href="biography.html">Biography</a></li>
 		        <li><a href="resume.html">Resume</a></li>
 		        <li><a href="codepen.html">Code Pen</a></li>
 		        <li><a href="gallery.html">Gallery</a></li>
-		        <li><a href="contact.html">Contact</a></li> 
+		        <li><a class="selected" href="contact.html">Contact</a></li> 
 	          <!-- "trigram for heaven" - hamburger icon -->
 	          <!-- onClick calls js function when clicked, shows/ hides dropdown  -->
 	          <li class="home-icon"><a href="#" onClick="toggleMobileDropdown()">&#9776;</a></li> 
 		    	</ul>
 		    </nav>
-		    <h1>About Me</h1>
+		    <h1>Contact Form</h1>
 			</header>
+			<main class="contact">
 
-			<main class="bio">
-				<section>
-					<img id="tag-photo" src="./lib/img/tag-photo.png" alt="potrait">
-				</section>
+				<form id="contactForm" action="#" method="post" onsubmit="return validate()">		<!-- use post so users info is encripted -->
 
-				<section>
-					<h2>Childhood</h2>
-		    	<p>As a child, I was very talkative and enjoyed drawing and playing outside. I loved school, poetry, and the football team the Panthers.</p>
-	    	</section>
-		    
-				<section>
-					<h2>Education</h2>
-		    	<p>I graduated from the high school Phillip O. Berry Academy of Technology with the class of 2017. I am currently in the RoadtoHire tech program.</p>
-				</section>
-
-		    <section>
-		    	<div>
-						<h2>Hobbies</h2>
-				    <ul>
-				    	<li>Painting</li>
-				    	<li>Swimming</li>
-				    	<li>Reading</li>
-				    </ul>
-					</div>
-				</section>
-		    
-				<section>
-					<h2>Life Goals</h2>
-			    <ul>
-			   		<li>Getting a job as a software engineer</li>
-			   		<li>Going to college</li>
-			  		<li>Being financially secure</li>
-			    </ul>
-				</section>				 
-			</main> 
-
-			<!-- create footer with social media links -->
+				  <!-- name -->
+				  <!-- every lable needs a for -->
+				  <!-- input needs an id with the same value as its name and for -->
+				  <div>
+				    <label for="firstname">First Name:</label>
+				    <input type="text" id="firstname" name="firstname" placeholder="Johnny" />
+				  </div>
+				  <div>
+				    <label for="lastname">Last Name:</label>
+				    <input type="text" id="lastname" name="lastname" placeholder="Appleseed" />
+				  </div>
+				  <!-- email-->
+			   	<div>
+				    <label for="email">Email:</label>
+				    <input type="email" id="email" name="email" placeholder="johnny@gmail.com" />
+			   	</div>
+				  <!-- phone-->
+			   	<div>
+				    <label for="phone">Phone:</label>
+				    <input type="tel" id="phone" name="phone" placeholder="xxx-xxx-xxxx" pattern="/^\d{3}-\d{3}-d\{4}$" />
+			   	</div>
+				  <!-- company-->
+			   	<div>
+				    <label for="company">Company:</label>
+				    <input type="text" id="company" name="company" placeholder="Red Ventures" />
+			   	</div>
+				  <!-- comments/questions-->
+			   	<div id="textarea">
+				    <label for="comments">Comments/Questions:</label>
+				    <textarea rows="6" cols="40" id="comments" name="comments" placeholder="Leave comments/questions here"></textarea>
+			   	</div>
+				  <!-- save button-->
+			   	<div>
+				  	<input type="submit" name="submit" value="Submit" />
+			   	</div>	   
+				</form> 
+			</main>
+	  
+		  <!-- create footer with social media links -->
 		  <footer>
 		  	<div>
 		  		<div class="border-footer"></div>
@@ -84,3 +89,4 @@
 	  </div>
   </body>
 </html>
+  
